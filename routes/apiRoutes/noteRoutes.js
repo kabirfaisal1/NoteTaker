@@ -31,12 +31,12 @@ router.delete('/notes/:id', (req, res) => {
     res.json(notes);
 });
 
-//route will use this to post notes. http://localhost:3001/notes
-router.put('/notes/:id', (req, res) => {
-    req.body.id = notes.length.toString();
-    let note = editNote(req.body, notes);
-    res.json(note);
-});
+// //route will use this to edit notes. http://localhost:3001/notes
+// router.put('/notes/:id', (req, res) => {
+//     req.body.id = notes.length.toString();
+//     let note = editNote(req.body, notes);
+//     res.json(note);
+// });
 
 
 
