@@ -33,12 +33,12 @@ var deleteNote = function(id) {
 };
 
 // If there is an activeNote, display it, otherwise render empty inputs
-var renderActiveNote = function() {
+var renderActiveNote = function(note,id) {
   $saveNoteButton.hide();
 
   if (activeNote.id) {
-    $noteTitle.attr("readonly", true);
-    $noteText.attr("readonly", true);
+    $noteTitle.attr("readonly", false);
+    $noteText.attr("readonly", false);
     $noteTitle.val(activeNote.title);
     $noteText.val(activeNote.text);
   } else {
@@ -47,6 +47,11 @@ var renderActiveNote = function() {
     $noteTitle.val("");
     $noteText.val("");
   }
+  return $.ajax({
+    url: "/api/notes" + id,
+    data: note,
+    method: "update"
+  });
 };
 
 // Get the note data from the inputs, save it to the db and update the view
