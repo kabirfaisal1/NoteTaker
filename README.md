@@ -7,12 +7,8 @@ application called Note Taker that can be used to write and save notes. This app
   * [UserStory](#userstory)
   * [Acceptance Criteria](#acceptance-criteria)
   * [Application Invoked](#application-invoked)
-  * [Test Invoked](#test-invoked)
-  * [Test Case](#test-case)
   * [Screenshots](#screenshots)
-    * [TDD](#tdd)
-    * [Inquire Display](#inquire-display)
-  * [Video](#video)
+
 
  
 ## [Deployed URL](#table-of-contents)
@@ -25,17 +21,10 @@ application called Note Taker that can be used to write and save notes. This app
    https://github.com/kabirfaisal1/NoteTaker.git
 ```
 
-## [Video](#table-of-contents)
-```
-
-
-```
-
 ## [Dependency](#table-of-contents)
 ```
     1. node.js (npm install -g npm) on your system
-    2. jest 
-    3. Express.js
+    2. Express.js
 ```
 ## [User Story](#table-of-contents)
 ```
@@ -65,25 +54,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ```
 node [your node app]
 ```
-## [Test Invoked](#table-of-contents)
-```
-npm [your test file]
-```
-
-## [Test Case](#table-of-contents)
-1. 
 
 ## [Screenshots](#table-of-contents)
-### [TDD](#table-of-contents)
-1. 
-
-![Image at TDD Fail.](./assets/image/tdd_fail.png)
-
-2. After building the constructor 
-
-![Image at TDD Pass.](./assets/image/tdd_pass.png)
-
-### [Inquire Display](#table-of-contents)
-<!-- ![Image at console display Inquire](./assets/image/tdd_pass.png) -->
-![Image at node questions](./assets/image/nodequestions.png)
+![Image at node questions](./images/appPhoto.png)
 
