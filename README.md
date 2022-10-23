@@ -14,7 +14,7 @@ application called Note Taker that can be used to write and save notes. This app
 ## [Deployed URL](#table-of-contents)
 ```
   heroku: https://note-takers2022.herokuapp.com
-  gitHub:  https://kabirfaisal1.github.io/NoteTaker/
+
 ```
 ## [Git Repo](#table-of-contents)
 ```
