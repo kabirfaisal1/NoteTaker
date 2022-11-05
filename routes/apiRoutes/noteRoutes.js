@@ -18,10 +18,7 @@ router.get('/notes', (req, res) => {
     res.json(saved);
 });
 
-router.get('/notes/:id', (req, res) => {
-    let saved = notes;
-    res.json(saved);
-});
+
 
 //route will use this to post notes. http://localhost:3001/notes
 router.post('/notes', (req, res) => {
