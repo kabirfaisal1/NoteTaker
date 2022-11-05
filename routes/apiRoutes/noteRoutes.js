@@ -21,7 +21,7 @@ router.get('/notes', (req, res) => {
 
 
 //route will use this to post notes. http://localhost:3001/notes
-router.post('/notes', (req, res) => {
+router.post('/notes?', (req, res) => {
     req.body.id = notes.length.toString();
     console.log( req.body.id);
     let note = createNewNote(req.body, notes);
