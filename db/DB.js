@@ -26,6 +26,19 @@ class DB {
       throw error;
     }
   }
+  async editNote(data) {
+    console.log(data);
+
+    try {
+      console.log("noteData",noteData);
+      await writeFileAsync(noteData, JSON.stringify(data, null, "\t")).then(() => {
+         console.log("New note added.");
+      }
+      );
+    } catch (error) {
+      throw error;
+    }
+  }
 
   async deleteNote(data) {
     try {

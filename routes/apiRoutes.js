@@ -15,6 +15,8 @@ router.get("/api/notes", async function (req, res) {
 // route to add a new note and add it to the json file
 router.post("/api/notes", async function (req, res) {
   const currentNotes = await DB.readNotes();
+  console.log(req.body)
+
   let newNote = {
     id: uuid(),
     title: req.body.title,
@@ -40,5 +42,11 @@ router.delete("/api/notes/:id", async function (req, res) {
   
   return res.send(newNoteData);
 });
+
+
+router.put("/api/notes/:id", async function (req, res) {
+  console.log('insider edit')
+});
+
 
 module.exports = router;
