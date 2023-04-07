@@ -1,20 +1,21 @@
-const PORT = process.env.PORT || 3001;
+//require dependencies
 const express = require('express');
+
+//create express app
 const app = express();
-const fs = require('fs');
-const path = require('path');
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
 
-app.use(express.urlencoded({
-    extended: true
-}));
+//create a PORT variable
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+//set up express to handle data parsing
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+app.use(express.static("public"));
 
-app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
-});
+const apiRoutes = require("./routes/apiRoutes");
+app.use(apiRoutes);
+const htmlRoutes = require("./routes/htmlRoutes");
+app.use(htmlRoutes);
+
+//create server listener
+app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));

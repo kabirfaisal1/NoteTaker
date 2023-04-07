@@ -1,14 +1,12 @@
-{
-  "notes": [
-    {
-      "title": "Fall Clean up Shopping List",
-      "text": "1. Cleanup Bags\n2. Pruner \n3. Mulcher\n4. Wheel barrow",
-      "id": "0"
-    },
-    {
-      "title": "Grocery Shopping",
-      "text": "1. Milk\n2. Avocado\n3. Cilantro\n4. Egg\n5. Stack\n6. Chicken",
-      "id": "1"
-    }
-  ]
-}
+[
+	{
+		"id": "8c28f3b3-dfbb-4aea-b374-c5e349d183c6",
+		"title": "Integer blandit neque eget o",
+		"text": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel libero imperdiet, ultrices dui a, malesuada ipsum. Etiam vitae blandit enim, ac dictum mi. Vestibulum venenatis tortor orci. Praesent sit amet erat vitae urna convallis porta. Quisque at ex nec ante faucibus posuere congue eget tortor. Pellentesque laoreet orci in arcu laoreet, at ultrices nisl semper. Cras congue faucibus interdum. Praesent scelerisque dapibus hendrerit. Praesent scelerisque ipsum a tincidunt scelerisque."
+	},
+	{
+		"id": "983b077d-0d68-44c7-aeac-4ecb4146e444",
+		"title": "Donec gravida bibendum ultri",
+		"text": "Maecenas dictum consequat urna sed mattis. Nullam ultricies nibh enim, eu dictum massa ultricies congue. Aliquam ornare sapien at ultrices varius. Sed vitae justo purus. Donec porta dapibus ante eget vestibulum. Aliquam vitae diam facilisis risus feugiat maximus. Phasellus scelerisque eros in dignissim finibus. Nulla nec commodo augue. Integer at egestas turpis. Suspendisse vestibulum risus dui, eget eleifend risus laoreet sit amet. Aliquam scelerisque lectus eget rhoncus dictum. Integer lorem enim, pulvinar sed nisi et, pulvinar luctus ligula."
+	}
+]
