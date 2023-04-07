@@ -1,21 +1,31 @@
-//require dependencies
+// setup a server to accept incoming requests, request express
 const express = require('express');
-
-//create express app
+// require path to call multiple files across the project
+const path = require('path');
+// instantiate the server
 const app = express();
+// setup a route for the front end to request data from
+const {notes} = require('./db/notes.json')
 
-//create a PORT variable
-const PORT = process.env.PORT || 3000;
 
-//set up express to handle data parsing
-app.use(express.urlencoded({ extended: true }));
+// init a body parsing middleware to handle raw json data, form submissions and other deeply nested data
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.urlencoded({extended:true}));
 
-const apiRoutes = require("./routes/apiRoutes");
-app.use(apiRoutes);
-const htmlRoutes = require("./routes/htmlRoutes");
-app.use(htmlRoutes);
+// add a middleware to make 'public' directory static so styling and functionality could ba accessed too
+app.use(express.static(path.join(__dirname, 'public')));
 
-//create server listener
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+
+// points at all API routes in APIroutes directory, to perform actions on notes.json 
+app.use('/', require('./routes/APIroutes/notesRoutes'));
+
+// points at all routes in HTMLroutes directory for the front end
+app.use('/', require('./routes/HTMLroutes/HTMLroutes'));
+
+
+//setup a port, the server will be on Heroku but but as a backup we'll use 3001
+const PORT = process.env.PORT || 3001;
+//listen for requests
+app.listen(PORT, () => {
+    console.log(`API server is on ${PORT}`);
+})
