@@ -35,36 +35,35 @@ router.delete("/api/notes/:id", async function (req, res) {
   // notes already in json file
   const currentNotes = await DB.readNotes();
   // sort through notes file and create a new array minus the note in question
-  const newNoteData = currentNotes.filter((note) => note.id !== noteToDelete);
+  const deleteNoteData = currentNotes.filter((note) => note.id !== noteToDelete);
 
   // sends the new array back the DB class 
-  await DB.deleteNote(newNoteData);
+  await DB.deleteNote(deleteNoteData);
   
-  return res.send(newNoteData);
+  return res.send(deleteNoteData);
 });
 
 
+///NEW
 router.put("/api/notes/:id", async function (req, res) {
-  console.log('INDIE edit')
   // separates out the note to EDIT based on id
   const noteToEdit = req.params.id;
   const currentNotes = await DB.readNotes();
-  console.log(currentNotes.filter((note) => note.id ==noteToEdit))
-  const newNoteData =currentNotes.filter((note) => {
-    if(note.id ==noteToEdit){
-      console.log("true")
-        let editNoteData = {
-        id: noteToEdit,
-        title: req.body.title,
-        text: req.body.text,
-      };
-    }
-  
-  })
- 
-  await DB.editNote(noteToEdit,editNoteData);
-  return res.send(editNoteData);
-  
+  //let editNoteData = currentNotes.filter((note) => note.id == noteToEdit);
+    // console.log("LINE 75", editNoteData)
+    let editNoteData =  [{
+      id: noteToEdit,
+      title: req.body.title,
+      text: req.body.text,
+    }];
+    let existingDataArr = Array.from(currentNotes);
+    let argReq = new Map(editNoteData.map(e => [e.id, e]));
+    console.log("LINE 67", argReq)
+    let updateArr= existingDataArr.map(obj => argReq.has(obj.id) ? argReq.get(obj.id) : obj);
+    console.log("line 70", updateArr)
+    await DB.editNote(updateArr);
+    // await DB.addNote([...currentNotes, editNoteData]);
+     return res.send(editNoteData);
 });
 
 

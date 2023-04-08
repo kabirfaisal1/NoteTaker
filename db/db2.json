@@ -1,5 +1,4 @@
 [
-
 	{
 		"id": "abb56791-125b-4a58-9cf6-8072772f7e74",
 		"title": "GET NOTES",
@@ -26,16 +25,8 @@
 		"text": "post"
 	},
 	{
-		"title": "I am editing",
-		"text": "URI: http://localhost:3000/api/notes/<id> CLick on [send]"
-	},
-	{
 		"id": "ee317532-4ea0-4846-8366-a9eff0e5b7e5",
-		"title": "Hello",
-		"text": "world"
-	},
-	{
-		"title": "I am editing",
-		"text": "URI: http://localhost:3000/api/notes/<id> CLick on [send]"
+		"title": "I am editing 12356",
+		"text": "I did it: .....URI: http://localhost:3000/api/notes/<id> CLick on [send]"
 	}
 ]
