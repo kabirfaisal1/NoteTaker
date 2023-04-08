@@ -1,32 +1,57 @@
 [
 	{
-		"id": "abb56791-125b-4a58-9cf6-8072772f7e74",
-		"title": "GET NOTES",
-		"text": "URI: /api/notes/ CLick on [send]"
+		"id": "542bd3b6-8e08-4607-b9cc-f009caebc5d2",
+		"title": "Postman: postNote ",
+		"text": "URI: http://localhost:3000/api/notes/\n\nImportant NOTE: \n1. DO NOT delete this\n2. While using post man follow this step:\n      a. paste the url\n      b. click on body\n           c. click on [RAW] radio button\n           enter  data in following format\n{\n    \"title\":\"POST NOTES 2\",\n    \"text\":\"URI: http://localhost:3000/api/notes/\n}\n"
 	},
 	{
-		"id": "a378b5c5-1e47-4162-ad10-c63e077a7f35",
-		"title": "Edit 1 ",
-		"text": "testing 1"
+		"id": "ab621776-da5b-4966-9bb7-14b67ff415b1",
+		"title": "Postman: deleteNote",
+		"text": "uri: https://fk-note-taker.herokuapp.com/api/notes/<id>"
 	},
 	{
-		"id": "b0385578-b413-48ce-8b6c-1c2fccd7611b",
-		"title": "Testing 2 Edit",
-		"text": "Edit"
+		"id": "90e3149b-986f-40b7-abc4-3d15fd82f642",
+		"title": "Postman: getNote",
+		"text": "URI: https://fk-note-taker.herokuapp.com/api/notes"
 	},
 	{
-		"id": "3eeb4833-3909-4d4b-a728-568907d7faaf",
-		"title": "TETSING",
-		"text": "WORLD"
+		"id": "882f4be4-7617-4d47-a1f2-eb371097ad00",
+		"title": "Postman: editNote",
+		"text": "https://fk-note-taker.herokuapp.com/api/notes/<id>\n\nImportant NOTE: \n1. DO NOT delete this\n2. While using post man follow this step:\n      a. paste the url\n      b. click on body\n           c. click on [RAW] radio button\n           enter  data in following format\n{\n    \"title\":\"POST NOTES 2\",\n    \"text\":\"URI: http://localhost:3000/api/notes/\n}"
 	},
 	{
-		"id": "dd468945-167d-46d1-9e4f-580c68b50f90",
-		"title": "TEsting Edit",
-		"text": "post"
+		"id": "f984f162-96c2-4576-a3a7-fb197895fa2f",
+		"title": "Don't Do this:",
+		"text": "1. do not delete any note that start with \"Postman\""
 	},
 	{
-		"id": "ee317532-4ea0-4846-8366-a9eff0e5b7e5",
-		"title": "I am editing 12356",
-		"text": "I did it: .....URI: http://localhost:3000/api/notes/<id> CLick on [send]"
+		"id": "af132a53-be89-461e-8816-ae665b58c78e",
+		"title": "Don't do this",
+		"text": "1. do not delete any note that start with \"Postman\"\n2. do not edit (PUT) any not that start with \"Postman\""
+	},
+	{
+		"id": "b84410c9-9d38-41eb-bb9b-3d9dbad74789",
+		"title": "Can be deleted 1",
+		"text": "you can Delete this"
+	},
+	{
+		"id": "84614a0f-be4d-48b3-a1e3-c76ced6a2bb3",
+		"title": "Can be deleted 2",
+		"text": "feel free to delete"
+	},
+	{
+		"id": "c2aa234b-9ecc-41e3-a601-e196db3df5ec",
+		"title": "UI Edit dont work",
+		"text": "sorry is work in progress"
+	},
+	{
+		"id": "7ec6d7f1-92e4-4326-86ea-95a541640be7",
+		"title": "can be edit 2",
+		"text": "feel free to edit this"
+	},
+	{
+		"id": "371136c2-1c8e-4869-8fa3-1f5777a9890e",
+		"title": "can be edit 3",
+		"text": "feel free to edit this"
 	}
 ]
