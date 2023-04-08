@@ -26,13 +26,13 @@ class DB {
       throw error;
     }
   }
-  async editNote(data) {
+  async editNote(id,data) {
     console.log(data);
 
     try {
-      console.log("noteData",noteData);
-      await writeFileAsync(noteData, JSON.stringify(data, null, "\t")).then(() => {
-         console.log("New note added.");
+      console.log("editData",noteData);
+      await writeFileAsync(noteData, JSON.stringify(id,data, null, "\t")).then(() => {
+         console.log("Edit note added.");
       }
       );
     } catch (error) {

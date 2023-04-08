@@ -31,6 +31,14 @@ const deleteNote = (id) => {
     method: "DELETE",
   });
 };
+// A function for deleting a note from the db
+const editNote = (id) => {
+  console.log('INSIDE editNote');
+  return $.ajax({
+    url: "api/notes/" + id,
+    method: "PUT",
+  });
+};
 
 // If there is an activeNote, display it, otherwise render empty inputs
 const renderActiveNote = () => {
@@ -48,6 +56,7 @@ const renderActiveNote = () => {
     $noteText.val("");
   }
 };
+
 
 // Get the note data from the inputs, save it to the db and update the view
 const handleNoteSave = function () {
@@ -76,6 +85,23 @@ const handleNoteDelete = function (event) {
   deleteNote(note.id).then(() => {
     getAndRenderNotes();
     renderActiveNote();
+  });
+};
+
+// Delete the clicked note
+const handleNoteEdit = function (event) {
+  // prevents the click listener for the list from being called when the button inside of it is clicked
+  // event.stopPropagation();
+  console.log('inside handleNoteEdit')
+  const note = $(this).parent(".list-group-item").data();
+  
+  if (activeNote.id === note.id) {
+    activeNote = {};
+  }
+
+  editNote(note.id).then(() => {
+    $saveNoteBtn.show();
+    handleNoteView();
   });
 };
 
@@ -109,11 +135,18 @@ const renderNoteList = (notes) => {
 
   // Returns jquery object for li with given text and delete button
   // unless withDeleteButton argument is provided as false
-  const create$li = (text, withDeleteButton = true) => {
+  const create$li = (text,withEditButton= true ,withDeleteButton = true) => {
     const $li = $("<li class='list-group-item'>");
     const $span = $("<span>").text(text);
     $li.append($span);
-
+    if (withEditButton) {
+      const $editBtn = $(
+      
+        "<i class='fas fa-edit float-left edit-note' style='color: #0a31f5;'>"
+        
+      );
+      $li.append($editBtn);
+    }
     if (withDeleteButton) {
       const $delBtn = $(
         "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
@@ -143,6 +176,7 @@ const getAndRenderNotes = () => {
 $saveNoteBtn.on("click", handleNoteSave);
 $noteList.on("click", ".list-group-item", handleNoteView);
 $newNoteBtn.on("click", handleNewNoteView);
+$noteList.on("click", ".edit-note", handleNoteEdit)
 $noteList.on("click", ".delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);

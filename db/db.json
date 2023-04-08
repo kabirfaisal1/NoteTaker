@@ -1,22 +1,27 @@
 [
 	{
-		"id": "64e03e3a-b055-4f74-ba59-c75e56c0c5d7",
-		"title": "Post a note with Postman",
-		"text": "URI: /api/notes/ then on the body tab click on raw and type{title:xyz text:acb} DO NOT use form data while using post man"
-	},
-	{
 		"id": "abb56791-125b-4a58-9cf6-8072772f7e74",
 		"title": "GET NOTES",
 		"text": "URI: /api/notes/ CLick on [send]"
 	},
 	{
-		"id": "23a0cd25-df32-45d0-b8ac-bfaf0119f386",
-		"title": "Delete NOTES",
-		"text": "URI: http://localhost:3000/api/notes/<id> CLick on [send]"
+		"id": "a378b5c5-1e47-4162-ad10-c63e077a7f35",
+		"title": "Edit 1 ",
+		"text": "testing 1"
 	},
 	{
-		"id": "03a81872-7eae-4804-9972-8ac9713c7de2",
-		"title": "Make Edit",
-		"text": "TYPE FROM POST MAN"
+		"id": "b0385578-b413-48ce-8b6c-1c2fccd7611b",
+		"title": "Testing 2 Edit",
+		"text": "Edit"
+	},
+	{
+		"id": "69b2509c-b62f-4f72-8c97-d8f273a43b73",
+		"title": "Testing 3 Edit",
+		"text": "3"
+	},
+	{
+		"id": "3eeb4833-3909-4d4b-a728-568907d7faaf",
+		"title": "TETSING",
+		"text": "WORLD"
 	}
 ]

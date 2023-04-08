@@ -45,7 +45,26 @@ router.delete("/api/notes/:id", async function (req, res) {
 
 
 router.put("/api/notes/:id", async function (req, res) {
-  console.log('insider edit')
+  console.log('INDIE edit')
+  // separates out the note to EDIT based on id
+  const noteToEdit = req.params.id;
+  const currentNotes = await DB.readNotes();
+  console.log(currentNotes.filter((note) => note.id ==noteToEdit))
+  const newNoteData =currentNotes.filter((note) => {
+    if(note.id ==noteToEdit){
+      console.log("true")
+        let editNoteData = {
+        id: noteToEdit,
+        title: req.body.title,
+        text: req.body.text,
+      };
+    }
+  
+  })
+ 
+  await DB.editNote(noteToEdit,editNoteData);
+  return res.send(editNoteData);
+  
 });
 
 
