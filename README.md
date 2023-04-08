@@ -13,7 +13,7 @@ application called Note Taker that can be used to write and save notes. This app
  
 ## [Deployed URL](#table-of-contents)
 ```
-  heroku: https://note-takers2022.herokuapp.com
+  heroku: https://fk-note-taker.herokuapp.com/notes
 
 ```
 ## [Git Repo](#table-of-contents)
