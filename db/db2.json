@@ -2,22 +2,22 @@
 	{
 		"id": "542bd3b6-8e08-4607-b9cc-f009caebc5d2",
 		"title": "Postman: postNote ",
-		"text": "URI: http://localhost:3000/api/notes/\n\nImportant NOTE: \n1. DO NOT delete this\n2. While using post man follow this step:\n      a. paste the url\n      b. click on body\n           c. click on [RAW] radio button\n           enter  data in following format\n{\n    \"title\":\"POST NOTES 2\",\n    \"text\":\"URI: http://localhost:3000/api/notes/\n}\n"
+		"text": "URI: <EndPoint>/api/notes/\n\nImportant NOTE: \n1. DO NOT delete this\n2. While using post man follow this step:\n      a. paste the url\n      b. click on body\n           c. click on [RAW] radio button\n           enter  data in following format\n{\n    \"title\":\"POST NOTES 2\",\n    \"text\":\"URI: http://localhost:3000/api/notes/\n}\n"
 	},
 	{
 		"id": "ab621776-da5b-4966-9bb7-14b67ff415b1",
 		"title": "Postman: deleteNote",
-		"text": "uri: https://fk-note-taker.herokuapp.com/api/notes/<id>"
+		"text": "uri:https://note-takefk-b9b6f734a0f5.herokuapp.com/api/notes/<id>"
 	},
 	{
 		"id": "90e3149b-986f-40b7-abc4-3d15fd82f642",
 		"title": "Postman: getNote",
-		"text": "URI: https://fk-note-taker.herokuapp.com/api/notes"
+		"text": "URI:https://note-takefk-b9b6f734a0f5.herokuapp.com/api/notes"
 	},
 	{
 		"id": "882f4be4-7617-4d47-a1f2-eb371097ad00",
 		"title": "Postman: editNote",
-		"text": "https://fk-note-taker.herokuapp.com/api/notes/<id>\n\nImportant NOTE: \n1. DO NOT delete this\n2. While using post man follow this step:\n      a. paste the url\n      b. click on body\n           c. click on [RAW] radio button\n           enter  data in following format\n{\n    \"title\":\"POST NOTES 2\",\n    \"text\":\"URI: http://localhost:3000/api/notes/\n}"
+		"text": "https://note-takefk-b9b6f734a0f5.herokuapp.com/<id>\n\nImportant NOTE: \n1. DO NOT delete this\n2. While using post man follow this step:\n      a. paste the url\n      b. click on body\n           c. click on [RAW] radio button\n           enter  data in following format\n{\n    \"title\":\"POST NOTES 2\",\n    \"text\":\"URI: http://localhost:3000/api/notes/\n}"
 	},
 	{
 		"id": "f984f162-96c2-4576-a3a7-fb197895fa2f",
